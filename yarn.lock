@@ -3426,6 +3426,11 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
+keen-slider@^6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/keen-slider/-/keen-slider-6.6.1.tgz#c32ab724ddf7e25ebf4600d0f7a7d4c6d7ec4321"
+  integrity sha512-9+GziwkHkhhMHo9CBvqWho0EDBhEoROMh8zH7oAkhRUIx7F/2nvkmOD/iK/yLslVoKXsCHvDjD5UN1EetQrvcQ==
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"

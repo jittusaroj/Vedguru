@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { useKeenSliderNative } from 'keen-slider/react-native'
 
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Text, ScrollView, View, TouchableOpacity, Image } from 'react-native';
@@ -24,7 +25,10 @@ export default function App() {
     { key: 'albums', title: 'Read',icon:'book'  },
     { key: 'recents', title: 'user',icon:'book' },
   ]);
-
+  const slides = 4
+  const slider = useKeenSliderNative({
+    slides,
+  })
   const renderScene = BottomNavigation.SceneMap({
     music: MusicRoute,
     albums: AlbumsRoute,
@@ -166,7 +170,19 @@ export default function App() {
       />
       <View style={{flex:1,marginTop:20}}>
       <Image source={{ uri: "https://picsum.photos/200", width: "100%", height: 120,padding:10 }} />
+
+
+
       </View>
+      <View {...slider.containerProps}>
+      {[...Array(slides).keys()].map(idx => {
+        return (
+          <View key={idx} {...slider.slidesProps[idx]}>
+            <Text>Slide {idx}</Text>
+          </View>
+        )
+      })}
+    </View>
       <BottomNavigation
       style={{position:"absolute",left:0,right:0,bottom:0}}
       navigationState={{ index, routes }}
